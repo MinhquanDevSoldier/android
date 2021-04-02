@@ -13,13 +13,13 @@ import android.widget.Toast;
 public class CapNhatCauThu extends AppCompatActivity {
     EditText edtten,edtsoao,edtdiachi;
     Button btncapnhat,btndong;
-    DataBaseCauThu db = new DataBaseCauThu(getApplicationContext());
+    DataBaseCauThu db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cap_nhat_cau_thu);
-
+        db = new DataBaseCauThu(getApplicationContext());
         Bundle bundle = new Bundle();
         Intent get = getIntent();
         bundle = get.getBundleExtra("ThongTin");

@@ -69,11 +69,11 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.suacauthu:
-//                Intent capnhat = new Intent(getApplicationContext(),CapNhatCauThu.class);
-//                Bundle bundle = new Bundle();
-//                bundle.putSerializable("CauThu",listcauthu.get(info.position));
-//                capnhat.putExtra("ThongTin",bundle);
-//                startActivityForResult(capnhat,1113);
+                Intent capnhat = new Intent(getApplicationContext(),CapNhatCauThu.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("CauThu",listcauthu.get(info.position));
+                capnhat.putExtra("ThongTin",bundle);
+                startActivityForResult(capnhat,1113);
                 break;
             case R.id.xoacauthu:
                 db.XoaCauThu(id);
